@@ -1,0 +1,16 @@
+Package: BCHFellow2025
+Type: Package
+Title: Interactive LearnR Tutorial for Incoming 2025 Nephrology Fellows
+Version: 0.1.0
+Authors@R: 
+    person("Michelle", "McNulty", email = "michelle@example.com", role = c("aut", "cre"))
+Description: This package contains a LearnR-based interactive R tutorial designed for incoming Boston Children's Hospital Nephrology fellows. 
+    It introduces basic R skills and concepts through exercises and examples tailored to kidney research workflows.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports:
+    learnr,
+    shiny
