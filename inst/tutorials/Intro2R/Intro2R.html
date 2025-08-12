@@ -243,9 +243,11 @@ data-pipe="|&gt;">
 <p>If you want R to look somewhere else (e.g., a different folder), you
 have to change your working directory with
 <code>setwd("path/to/your/folder")</code>.</p>
+<blockquote>
 <p>💡 Tip: If your files are stored on a network drive or external
 volume, your path may start with something like
 <code>/Volumes/YourDriveName</code>.</p>
+</blockquote>
 </div>
 <div id="section-read-in-data" class="section level3">
 <h3>Read in data</h3>
@@ -954,8 +956,7 @@ the results file was not filtered to the covariate of interest.</li>
 </ul>
 <p><img src="images/bad_manhattan.png" width=550></p>
 <ul>
-<li>Here we realized that some labs truncated eGFR and that it’s
-date-dependent.</li>
+<li>Can anyone guess what happened here?</li>
 </ul>
 <p><img src="images/bad_egfr.png" width=550></p>
 </div>
@@ -2133,23 +2134,20 @@ print(tab1)</code></pre>
 <script>if (Tutorial.triggerMathJax) Tutorial.triggerMathJax()</script>
 </div>
 </div>
-<hr />
 </div>
 </div>
-<div id="section-summarize-your-results" class="section level2">
-<h2>Summarize your results</h2>
-<ul>
-<li>A collaborator has identified genetic variants and a treatment
-associated with kidney function. They ask you to test these associations
-in your cohort. You’re given a large dataset with the variants of
-interest, demographics information, therapeutic indicator, and kidney
-function for each individual in your cohort. They would like a summary
-of the cohort, i.e. “Table 1”, p-values for tested associations, and a
-few figures for the paper that summarize key findings.</li>
-</ul>
-<p>Table 1</p>
-<p>SNP and eGFR Treatment results</p>
-<p>ggsave?</p>
+<div id="section-conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Through this tutorial, you learned how to import and clean data in R,
+explore variables, and apply statistical models to assess associations
+between SNPs and kidney function measures.</p>
+<p>You also practiced creating descriptive tables and interpreting model
+results within a reproducible workflow.</p>
+<p>By combining tidyverse tools, regression modeling, and table
+summaries, you now have a foundation for analyzing and presenting data
+in R.</p>
+<p>Email <code>michelle.mcnulty@childrens.harvard.edu</code> if you
+would like the original csv so you can practice in your own RSudio.</p>
 <p>
 <script type="application/shiny-prerendered" data-context="server-start">
 
@@ -2419,16 +2417,16 @@ learnr:::store_exercise_cache(structure(list(label = "read_file", global_setup =
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz1-1", question = structure("How many rows are there in the dataset?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_dde6b9e", 
+"character")), answers = list(structure(list(id = "lnr_ans_41c8566", 
     option = "11", value = "11", label = structure("11", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ee15cd9", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e257f5", 
     option = "3835", value = "3835", label = structure("3835", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c6effc3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_28a4f1b", 
     option = "5000", value = "5000", label = structure("5000", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e3c2c13", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4aad1df", 
     option = "16", value = "16", label = structure("16", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -2438,7 +2436,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("The number of rows is in the log, but you can also try using <code>nrow(df)<\u002fcode> to count the rows.", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz1-1-answer", question = "quiz1-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 16168313.492471, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1919772634.10604, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -2925,16 +2923,16 @@ learnr:::store_exercise_cache(structure(list(label = "missing", global_setup = s
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz2-1", question = structure("Which columns have missing data", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_50163a9", 
+"character")), answers = list(structure(list(id = "lnr_ans_6295efb", 
     option = "age", value = "age", label = structure("age", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c027955", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_3b44e2", 
     option = "sex", value = "sex", label = structure("sex", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9dbe72a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_54b9b8f", 
     option = "upcr", value = "upcr", label = structure("upcr", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7bdf3f8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_632e521", 
     option = "egfr", value = "egfr", label = structure("egfr", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -2944,7 +2942,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz2-1-answer", question = "quiz2-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1656708948.22853, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1565390754.27106, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -3383,16 +3381,16 @@ learnr:::store_exercise_cache(structure(list(label = "race2", global_setup = str
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz3-1", question = structure("What proportion of individuals are Hispanic or Latino?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_15e6998", 
+"character")), answers = list(structure(list(id = "lnr_ans_8ff2472", 
     option = "13595", value = "13595", label = structure("13595", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a88af76", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1ccbdf3", 
     option = "0.21", value = "0.21", label = structure("0.21", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d29365e", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_891055a", 
     option = "0.78", value = "0.78", label = structure("0.78", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2e5e08f", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_54c0ddd", 
     option = "0.02", value = "0.02", label = structure("0.02", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -3402,7 +3400,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz3-1-answer", question = "quiz3-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 82937250.9613793, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1643404847.73473, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -3651,16 +3649,16 @@ learnr:::store_exercise_cache(structure(list(label = "egfr", global_setup = stru
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz4-1", question = structure("What is the mean and standard deviation for eGFR?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_93616b2", 
+"character")), answers = list(structure(list(id = "lnr_ans_85d9d1f", 
     option = "6.03, 237.38", value = "6.03, 237.38", label = structure("6.03, 237.38", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b2b00a8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_da9b38c", 
     option = " 77.42, 35.49", value = " 77.42, 35.49", label = structure("77.42, 35.49", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_14c96f5", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ecfbbe4", 
     option = "77.71, 35.49", value = "77.71, 35.49", label = structure("77.71, 35.49", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_481890e", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_76c87f9", 
     option = "77.71, 6.03", value = "77.71, 6.03", label = structure("77.71, 6.03", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -3670,7 +3668,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz4-1-answer", question = "quiz4-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1282486940.9028, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1704699221.20619, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -4588,22 +4586,22 @@ learnr:::store_exercise_cache(structure(list(label = "ttest-plot-quiz", global_s
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz100-1", 
     question = structure("Which statement(s) are true:", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_24623ca", 
+    "character")), answers = list(structure(list(id = "lnr_ans_ce4928b", 
         option = "Age is significantly different between treatment status (p = 1.14e-227)", 
         value = "Age is significantly different between treatment status (p = 1.14e-227)", 
         label = structure("Age is significantly different between treatment status (p = 1.14e-227)", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_6601876", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_bdd1106", 
         option = "The mean age for those on the treatment is 51.9", 
         value = "The mean age for those on the treatment is 51.9", 
         label = structure("The mean age for those on the treatment is 51.9", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_5b67d96", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b15cb5b", 
         option = "The mean age for those without treatment is 29.01", 
         value = "The mean age for those without treatment is 29.01", 
         label = structure("The mean age for those without treatment is 29.01", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_cdc1719", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_2a9856e", 
         option = "There appears to be an age bias in this study where younger participants are more likely to be on the treatment", 
         value = "There appears to be an age bias in this study where younger participants are more likely to be on the treatment", 
         label = structure("There appears to be an age bias in this study where younger participants are more likely to be on the treatment", html = TRUE, class = c("html", 
@@ -4616,7 +4614,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "quiz100-1-answer", question = "quiz100-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 831837795.612645, options = list()), class = c("learnr_checkbox", 
+    seed = 731409877.159411, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
 
@@ -4985,22 +4983,22 @@ learnr:::store_exercise_cache(structure(list(label = "wilcox-plot-quiz", global_
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz1010-1", 
     question = structure("Which statement(s) are true:", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_99a3c89", 
+    "character")), answers = list(structure(list(id = "lnr_ans_10ecf00", 
         option = "Individuals on the treatment have lower UPCR (p=0.008)", 
         value = "Individuals on the treatment have lower UPCR (p=0.008)", 
         label = structure("Individuals on the treatment have lower UPCR (p=0.008)", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3766d76", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_3a6237b", 
         option = "There is no evidence that individuals on the treatment have lower UPCR (p=0.99)", 
         value = "There is no evidence that individuals on the treatment have lower UPCR (p=0.99)", 
         label = structure("There is no evidence that individuals on the treatment have lower UPCR (p=0.99)", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_960eeb5", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_92c99e5", 
         option = "There is no difference between median UPCR when comparing treatment groups", 
         value = "There is no difference between median UPCR when comparing treatment groups", 
         label = structure("There is no difference between median UPCR when comparing treatment groups", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_b0929e", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_f178cd4", 
         option = "We did not test if individuals on the treatment have higher UPCR", 
         value = "We did not test if individuals on the treatment have higher UPCR", 
         label = structure("We did not test if individuals on the treatment have higher UPCR", html = TRUE, class = c("html", 
@@ -5013,7 +5011,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "quiz1010-1-answer", question = "quiz1010-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 1526705450.28907, options = list()), class = c("learnr_checkbox", 
+    seed = 478041958.277394, options = list()), class = c("learnr_checkbox", 
 "tutorial_question")), session = session)
 </script>
  
@@ -5611,20 +5609,20 @@ learnr:::store_exercise_cache(structure(list(label = "cor-code2b", global_setup 
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quizbb-1", question = structure("What does the formula syntax <code>egfr ~ histology<\u002fcode> mean in R?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_ac7b9d4", 
+"character")), answers = list(structure(list(id = "lnr_ans_1fcc3f3", 
     option = "Model histology as a function of egfr", value = "Model histology as a function of egfr", 
     label = structure("Model histology as a function of egfr", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5f2c212", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_6ecac64", 
     option = "Model egfr as a function of histology", value = "Model egfr as a function of histology", 
     label = structure("Model egfr as a function of histology", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d67d254", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4a6a303", 
     option = "It performs correlation between egfr and histology", 
     value = "It performs correlation between egfr and histology", 
     label = structure("It performs correlation between egfr and histology", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a0cabff", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_3cd52c6", 
     option = "It groups egfr by histology for plotting", value = "It groups egfr by histology for plotting", 
     label = structure("It groups egfr by histology for plotting", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -5635,7 +5633,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quizbb-1-answer", question = "quizbb-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1234118499.92532, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 835995521.610709, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -5643,16 +5641,16 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quizbb-2", question = structure("You run <code>test &lt;- t.test(age ~ treatment, data = df_clean)<\u002fcode>. What line of code will show the structure of the data stored in <code>test<\u002fcode>?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_bd65a22", 
+"character")), answers = list(structure(list(id = "lnr_ans_44aeae4", 
     option = "structure(test)", value = "structure(test)", label = structure("structure(test)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_38c4e2a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_db4169", 
     option = "class(test)", value = "class(test)", label = structure("class(test)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c81e5a3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_c7c8e6", 
     option = "summary(test)", value = "summary(test)", label = structure("summary(test)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_108909c", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_662d11", 
     option = "str(test)", value = "str(test)", label = structure("str(test)", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -5662,28 +5660,28 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quizbb-2-answer", question = "quizbb-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 977984164.044591, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1154158524.46255, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quizbb-3", question = structure("<p>What does this code return?<\u002fp>\n<p><code>df_clean %&gt;% group_by(sex) %&gt;% summarize(mean_age = mean(age))<\u002fcode><\u002fp>\n", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_537c3ba", 
+"character")), answers = list(structure(list(id = "lnr_ans_431eae1", 
     option = "A new column added to df_clean called mean_age", 
     value = "A new column added to df_clean called mean_age", 
     label = structure("A new column added to df_clean called mean_age", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9d38649", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_da3a256", 
     option = "A summary table showing the mean age for each sex group", 
     value = "A summary table showing the mean age for each sex group", 
     label = structure("A summary table showing the mean age for each sex group", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_18cb287", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_83879b2", 
     option = "A scatter plot of age by sex", value = "A scatter plot of age by sex", 
     label = structure("A scatter plot of age by sex", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_714daf9", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_341c464", 
     option = "An error because you didn't include mutate()", 
     value = "An error because you didn't include mutate()", label = structure("An error because you didn’t include mutate()", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -5694,7 +5692,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quizbb-3-answer", question = "quizbb-3"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 241227307.88767, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1400868561.34767, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -5762,20 +5760,20 @@ learnr:::store_exercise_cache(structure(list(label = "lm1", global_setup = struc
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz5-1", question = structure("What does a negative coefficient for SNP1 in the linear model suggest?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_c306715", 
+"character")), answers = list(structure(list(id = "lnr_ans_862964a", 
     option = "Individuals with the effect allele have lower eGFR on average.", 
     value = "Individuals with the effect allele have lower eGFR on average.", 
     label = structure("Individuals with the effect allele have lower eGFR on average.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_96627e5", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d282876", 
     option = "The model failed to converge.", value = "The model failed to converge.", 
     label = structure("The model failed to converge.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_38202f6", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_92ae2e5", 
     option = "SNP1 is not associated with eGFR.", value = "SNP1 is not associated with eGFR.", 
     label = structure("SNP1 is not associated with eGFR.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8ce75cc", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1c8990b", 
     option = "The SNP1 allele increases eGFR.", value = "The SNP1 allele increases eGFR.", 
     label = structure("The SNP1 allele increases eGFR.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -5786,7 +5784,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz5-1-answer", question = "quiz5-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1803958398.15997, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 772342868.64035, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -5853,20 +5851,20 @@ learnr:::store_exercise_cache(structure(list(label = "lm2", global_setup = struc
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz6-1", question = structure("Which of the following is the correct R syntax to fit a linear model that includes SNP3, sex, and histology as predictors of UPCR?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_3eb9283", 
+"character")), answers = list(structure(list(id = "lnr_ans_b2d72c1", 
     option = "lm(upcr ~ snp3 + sex + histology, data = df_clean)", 
     value = "lm(upcr ~ snp3 + sex + histology, data = df_clean)", 
     label = structure("lm(upcr ~ snp3 + sex + histology, data = df_clean)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f725f7a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d05c838", 
     option = "lm(df_clean, upcr ~ snp3 + age + histology)", value = "lm(df_clean, upcr ~ snp3 + age + histology)", 
     label = structure("lm(df_clean, upcr ~ snp3 + age + histology)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ee6fd13", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_aca41d6", 
     option = "lm(upcr ~ snp3 + sex + histology)", value = "lm(upcr ~ snp3 + sex + histology)", 
     label = structure("lm(upcr ~ snp3 + sex + histology)", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9ac455a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_eb935da", 
     option = "lm(upcr ~ snp3, sex, histology, data = df_clean)", 
     value = "lm(upcr ~ snp3, sex, histology, data = df_clean)", 
     label = structure("lm(upcr ~ snp3, sex, histology, data = df_clean)", html = TRUE, class = c("html", 
@@ -5878,7 +5876,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz6-1-answer", question = "quiz6-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 311506289.354944, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 826461869.115149, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -6253,17 +6251,17 @@ learnr:::store_exercise_cache(structure(list(label = "lm_list2", global_setup = 
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz7-1", question = structure("What is the estimated effect size and p-value for SNP3?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_5eab52", 
+"character")), answers = list(structure(list(id = "lnr_ans_7404e25", 
     option = "-2.20, < 2.2e-16", value = "-2.20, < 2.2e-16", 
     label = structure("-2.20, &lt; 2.2e-16", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_55cbe9d", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1a03837", 
     option = "-4.80, 5.85e-09", value = "-4.80, 5.85e-09", label = structure("-4.80, 5.85e-09", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_78056ae", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_19af656", 
     option = "-2.20, 0.01", value = "-2.20, 0.01", label = structure("-2.20, 0.01", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_312ede5", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7a0036f", 
     option = "-0.64, <2e-16", value = "-0.64, <2e-16", label = structure("-0.64, &lt;2e-16", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -6273,7 +6271,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz7-1-answer", question = "quiz7-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1533811426.78576, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1823209118.151, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -6765,22 +6763,22 @@ learnr:::store_exercise_cache(structure(list(label = "adjust", global_setup = st
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz8-1", question = structure("Which statement(s) are accurate? (significance = p&lt;0.05)", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_4892770", 
+"character")), answers = list(structure(list(id = "lnr_ans_c8bf55b", 
     option = "SNP1 and SNP3 are significant before multiple testing correction.", 
     value = "SNP1 and SNP3 are significant before multiple testing correction.", 
     label = structure("SNP1 and SNP3 are significant before multiple testing correction.", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b76a957", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4bc2a24", 
     option = "There are three SNPs significant before multiple testing correction.", 
     value = "There are three SNPs significant before multiple testing correction.", 
     label = structure("There are three SNPs significant before multiple testing correction.", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_84b27d8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4930af3", 
     option = "After multiple testing correction, only SNP1 is significant", 
     value = "After multiple testing correction, only SNP1 is significant", 
     label = structure("After multiple testing correction, only SNP1 is significant", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_a7da4c6", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fa359eb", 
     option = "After multiple testing correction, SNP1 and SNP3 is significant", 
     value = "After multiple testing correction, SNP1 and SNP3 is significant", 
     label = structure("After multiple testing correction, SNP1 and SNP3 is significant", html = TRUE, class = c("html", 
@@ -6792,7 +6790,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz8-1-answer", question = "quiz8-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 2090132022.02671, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 476273846.278218, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -7099,27 +7097,27 @@ learnr:::store_exercise_cache(structure(list(label = "2table2", global_setup = s
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz9-1", question = structure("Which of the following are true:", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_1743101", 
+"character")), answers = list(structure(list(id = "lnr_ans_2018442", 
     option = "50% of participants took the drug and do not have CKD", 
     value = "50% of participants took the drug and do not have CKD", 
     label = structure("50% of participants took the drug and do not have CKD", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f939fb", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f91076", 
     option = "13% of participants took the placebo and have CKD", 
     value = "13% of participants took the placebo and have CKD", 
     label = structure("13% of participants took the placebo and have CKD", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_3ccbb8b", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_eaf4d71", 
     option = "Of the participants that took the drug, 27% have CKD", 
     value = "Of the participants that took the drug, 27% have CKD", 
     label = structure("Of the participants that took the drug, 27% have CKD", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_769ae7a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1e5c690", 
     option = "Of the participants that took the placebo, 45% have CKD", 
     value = "Of the participants that took the placebo, 45% have CKD", 
     label = structure("Of the participants that took the placebo, 45% have CKD", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b860e8d", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4263aa6", 
     option = "The drug apprears to protect from CKD", value = "The drug apprears to protect from CKD", 
     label = structure("The drug apprears to protect from CKD", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
@@ -7130,7 +7128,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz9-1-answer", question = "quiz9-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1801059767.16132, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 555884539.241146, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -7322,22 +7320,22 @@ learnr:::store_exercise_cache(structure(list(label = "logistic_adj", global_setu
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz10-1", 
     question = structure("Which of the following are true:", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_26fd03f", 
+    "character")), answers = list(structure(list(id = "lnr_ans_f3a053f", 
         option = "Treatment is no longer associated with CKD (P=0.09)", 
         value = "Treatment is no longer associated with CKD (P=0.09)", 
         label = structure("Treatment is no longer associated with CKD (P=0.09)", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_1f0ecbe", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_70a6a8e", 
         option = "Treatment is no longer associated with CKD (P=0.76)", 
         value = "Treatment is no longer associated with CKD (P=0.76)", 
         label = structure("Treatment is no longer associated with CKD (P=0.76)", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_814c3d5", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_c28e79d", 
         option = "Age is significantly associated with CKD (P<2e-16)", 
         value = "Age is significantly associated with CKD (P<2e-16)", 
         label = structure("Age is significantly associated with CKD (P&lt;2e-16)", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8b543c9", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ccfde91", 
         option = "It is very important to adjust for potential confounders!", 
         value = "It is very important to adjust for potential confounders!", 
         label = structure("It is very important to adjust for potential confounders!", html = TRUE, class = c("html", 
@@ -7349,7 +7347,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "quiz10-1-answer", question = "quiz10-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 2098239290.52293, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 295714529.862297, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -7666,16 +7664,16 @@ learnr:::store_exercise_cache(structure(list(label = "tableone5", global_setup =
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz11-1", 
     question = structure("Which variable(s) have a significant association with snp1? (check all that apply)", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_5a98bbe", 
+    "character")), answers = list(structure(list(id = "lnr_ans_77e1421", 
         option = "age", value = "age", label = structure("age", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_d130d88", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_36769ec", 
         option = "race", value = "race", label = structure("race", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_ad4bf2d", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_8075c6", 
         option = "histology", value = "histology", label = structure("histology", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_7f628b5", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_a05d09e", 
         option = "egfr", value = "egfr", label = structure("egfr", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
     "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -7685,7 +7683,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
     "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "quiz11-1-answer", question = "quiz11-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 1367118306.36339, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1108374951.48387, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>

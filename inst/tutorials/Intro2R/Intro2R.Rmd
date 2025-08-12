@@ -1668,6 +1668,15 @@ quiz(
 ```
 
 
+## Conclusion 
+
+Through this tutorial, you learned how to import and clean data in R, explore variables, and apply statistical models to assess associations between SNPs and kidney function measures.  
+
+You also practiced creating descriptive tables and interpreting model results within a reproducible workflow.  
+
+By combining tidyverse tools, regression modeling, and table summaries, you now have a foundation for analyzing and presenting data in R.
+
+Email `michelle.mcnulty@childrens.harvard.edu` if you would like the original csv so you can practice in your own RSudio. 
 
 
 
