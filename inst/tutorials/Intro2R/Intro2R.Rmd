@@ -784,8 +784,8 @@ ggplot(df_clean, aes(x = treatment, y = age)) +
 quiz(
   question("Which statement(s) are true:",
            answer("Age is significantly different between treatment status (p = 1.14e-227)", correct = TRUE),
-           answer("The mean age for those on the treatment is 51.9", correct = TRUE),
-           answer("The mean age for those without treatment is 29.01", correct = TRUE),
+           answer("The mean age for those without the treatment is 51.9", correct = TRUE),
+           answer("The mean age for those on treatment is 29.01", correct = TRUE),
            answer("There appears to be an age bias in this study where younger participants are more likely to be on the treatment", correct = TRUE),
            allow_retry = TRUE
   ))
@@ -1676,7 +1676,7 @@ You also practiced creating descriptive tables and interpreting model results wi
 
 By combining tidyverse tools, regression modeling, and table summaries, you now have a foundation for analyzing and presenting data in R.
 
-Email `michelle.mcnulty@childrens.harvard.edu` if you would like the original csv so you can practice in your own RSudio. 
+Email `michelle.mcnulty@childrens.harvard.edu` if you would like the original csv so you can practice in your own RStudio. 
 
-
+Thanks!
 
