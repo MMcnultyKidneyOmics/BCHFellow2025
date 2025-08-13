@@ -857,7 +857,7 @@ wilcox.test(upcr ~ treatment, data = df_clean, alternative = "greater")
 
 It can be confusing to know which group has higher or lower values and the wilcox.test function does not report group medians like t.test reports group means. 
 
-Here is a simple way to calculate the median in each group using tidyverse to string together functions. 
+Here is a simple way to calculate the median in each group using dplyr to string together functions. 
 
 ```{r wilcox-tidy, exercise=TRUE}
 df_clean %>%  #start with the df_clean data frame
@@ -1137,10 +1137,10 @@ You can use the model diagnostics to see if adding the covariates resulted in a 
 ```{r quiz6}
 quiz(
   question("Which of the following is the correct R syntax to fit a linear model that includes SNP3, sex, and histology as predictors of UPCR?",
-    answer("lm(upcr ~ snp3 + sex + histology, data = df_clean)"),
+    answer("lm(upcr ~ snp3 + sex + histology, data = df_clean)", correct = TRUE),
     answer("lm(df_clean, upcr ~ snp3 + age + histology)"),
     answer("lm(upcr ~ snp3 + sex + histology)"),
-    answer("lm(upcr ~ snp3, sex, histology, data = df_clean)", correct = TRUE),
+    answer("lm(upcr ~ snp3, sex, histology, data = df_clean)"),
     allow_retry = TRUE
   )
 ) 
